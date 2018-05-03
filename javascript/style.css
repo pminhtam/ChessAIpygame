@@ -1,0 +1,63 @@
+
+body{
+	background: url(img/background/i2.jpg) no-repeat center center fixed;
+	  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+.container{
+	width: 900px;
+	margin: auto;
+	/*background-color: #789456;*/
+	
+}
+.board {
+    width: 500px;
+    margin: auto;
+    float: left;
+}
+
+/*#utility {
+	width: 400px;
+	float: left;
+}
+*/
+.info {
+    width: 300px;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 20px;
+    float: left;
+}
+
+/*.move-history {
+    height: 300px;
+}*/
+#move-history{
+	height: 300px;
+    overflow-y: scroll;
+    color: 	yellow;
+}
+.control{
+	padding-top: 10px;
+	float: left;
+	margin-left: 20px;
+}
+#back{
+	height: 70px;
+	width: 140px;
+	/*margin-left: : 50px;*/
+	/*padding: 20px;*/
+	background: url(img/button/back.png) center center;
+	background-size: cover;
+}
+#newgame{
+	margin-left: 20px;
+	/*padding: 20px;*/
+	/*background: #fff;*/
+	height: 70px;
+	width: 140px;
+	background: url(img/button/NewGame.png) center center;
+	background-size: cover;
+}

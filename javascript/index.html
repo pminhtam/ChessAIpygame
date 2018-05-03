@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="js/jquery/jquery-1.9.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/msdropdown/dd.css" />
+    <link rel="stylesheet" type="text/css" href="css/msdropdown/sprite.css" />
+    <script src="js/msdropdown/jquery.dd.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/msdropdown/flags.css" />
+</head>
+<body>
+<div class="container">
+    <div id="board" class="board"></div>
+    <div id="utility ">
+        <div class="info">
+            <span>Background:</span>
+            <select id="imgbackground" style="width:100px;" >
+                <option value="1" selected selected data-image="img/background/i1.jpg"  data-imagecss="flag">Type1</option>
+                <option value="2" selected data-image="img/background/i2.jpg"  data-imagecss="flag">Type2</option>
+            </select>
+            <br>
+            <span>Độ khó:</span>
+            <select id="search-depth">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <span  >Chọn quân:</span>
+            <select id="select-team" style="width:100px;" >
+                <option value="1" selected selected data-image="img/chesspieces/wikipedia/wN.png"  data-imagecss="flag">Trắng</option>
+                <option value="2" selected data-image="img/chesspieces/wikipedia/bN.png"  data-imagecss="flag">Đen</option>
+            </select>
+            <br>
+            <span>pieceTheme:</span>
+            <select id="pieceTheme" name="pieceTheme" style="width:100px;" >
+                <option value="1" selected data-image="img/chesspieces/wikipedia/bN.png"  data-imagecss="flag">1</option>
+                <option value="2" data-image="img/chesspieces/theme1/bN.png"  data-imagecss="flag">2</option>
+                <option value="3" data-image="img/chesspieces/theme2/bN.png"  data-imagecss="flag">3</option>
+            </select>
+            <br>
+            <span>Positions evaluated: <span id="position-count"></span></span>
+            <br>
+            <span>Thời gian: <span id="time"></span></span>
+            <br>
+            <span>Positions/s: <span id="positions-per-s"></span> </span>
+            <br>
+            <br>
+            <div class="move-history">
+                Lịch sử
+                <div id="move-history" >
+                </div>
+            </div>
+        </div>
+        <div class="control">
+            <button id="back"></button>
+            <button id="newgame"></button>
+            <!-- <button id="changeteam">Đổi lượt chơi</button> -->
+        </div>
+    </div>
+</div>
+
+
+<script>
+// $(document).ready(function(e) { 
+                // $("#webmenu").msDropDown();
+
+    $("#pieceTheme").msDropDown();
+    $("#select-team").msDropDown();
+    $("#imgbackground").msDropDown();
+
+    $("#imgbackground").change(function(){
+        var e = document.getElementById("imgbackground");
+        var value = e.options[e.selectedIndex].value;
+        var urlimg = "img/background/i"+value+".jpg"
+        // document.body.style.background = "url("+urlimg+") no-repeat center center fixed";
+        $("body").css({
+
+            "background": "url("+urlimg+") no-repeat center center fixed",
+            "-webkit-background-size": "cover",
+            "-moz-background-size": "cover",
+            "-o-background-size": "cover",
+            "background-size": "cover"
+
+        });
+
+    });
+// });
+
+</script>
+
+<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="lib/chessboardjs/js/chess.js"></script>
+<script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
