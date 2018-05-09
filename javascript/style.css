@@ -37,7 +37,7 @@ body{
 #move-history{
 	height: 300px;
     overflow-y: scroll;
-    color: 	yellow;
+    color: 	red;
 }
 .control{
 	padding-top: 10px;

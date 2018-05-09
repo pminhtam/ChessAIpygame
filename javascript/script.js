@@ -178,7 +178,7 @@ var getPieceValue = function (piece, x, y) {    // tính điểm của từng co
         } else if (piece.type === 'r') {        // quân xe
             return 50 + ( isWhite ? rookEvalWhite[y][x] : rookEvalBlack[y][x] );
         } else if (piece.type === 'n') {        // quân mã
-            return 40 + knightEval[y][x];
+            return 35+ knightEval[y][x];
         } else if (piece.type === 'b') {        // tịnh
             return 30 + ( isWhite ? bishopEvalWhite[y][x] : bishopEvalBlack[y][x] );
         } else if (piece.type === 'q') {        // hậu
